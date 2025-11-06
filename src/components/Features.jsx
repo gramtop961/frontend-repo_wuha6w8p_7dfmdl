@@ -1,4 +1,4 @@
-import { Compass, BookOpen, Clock, Beaker, Calculator, Sparkles, MapPin, Quote, HeartHandshake, GraduationCap, User, HelpCircle, Globe } from "lucide-react";
+import { Globe, Clock, BookOpen, HeartHandshake } from "lucide-react";
 
 const featureGroups = [
   {
@@ -57,6 +57,14 @@ const featureGroups = [
   },
 ];
 
+function toSlug(label) {
+  return label
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 function FeatureCard({ title, icon, items }) {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
@@ -67,12 +75,22 @@ function FeatureCard({ title, icon, items }) {
         <h3 className="font-semibold text-gray-900">{title}</h3>
       </div>
       <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-700">
-        {items.map((item) => (
-          <li key={item} className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            {item}
-          </li>
-        ))}
+        {items.map((item) => {
+          const slug = toSlug(item);
+          const href = `#${slug}`;
+          return (
+            <li key={item} className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <a
+                href={href}
+                className="hover:text-emerald-700 underline-offset-4 hover:underline focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded"
+                aria-label={`Go to ${item}`}
+              >
+                {item}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
