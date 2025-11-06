@@ -1,4 +1,4 @@
-import { Heart, Mail, Phone, Github } from "lucide-react";
+import { Heart, Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -6,10 +6,10 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-4 gap-8">
         <div>
           <div className="flex items-center gap-2">
-            <div className="h-9 w-9 rounded-xl bg-emerald-500 text-white grid place-items-center font-bold">ب</div>
-            <span className="font-semibold">Barakah</span>
+            <div className="h-9 w-9 rounded-xl bg-emerald-600 text-white grid place-items-center font-bold">ر</div>
+            <span className="font-semibold">Rahbar</span>
           </div>
-          <p className="mt-3 text-sm text-gray-600">A modern Islamic app that brings worship, knowledge, and community together.</p>
+          <p className="mt-3 text-sm text-gray-600">A modern Islamic companion that brings worship, knowledge, and community together.</p>
         </div>
         <div>
           <h4 className="font-semibold text-gray-900">About</h4>
@@ -30,7 +30,7 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-gray-900">Contact</h4>
           <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li className="flex items-center gap-2"><Mail size={16}/> support@barakah.app</li>
+            <li className="flex items-center gap-2"><Mail size={16}/> support@rahbar.app</li>
             <li className="flex items-center gap-2"><Phone size={16}/> +1 (555) 123-4567</li>
           </ul>
         </div>

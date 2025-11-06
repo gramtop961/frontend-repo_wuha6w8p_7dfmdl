@@ -5,8 +5,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/60 border-b border-gray-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-xl bg-emerald-500 text-white grid place-items-center font-bold">ب</div>
-          <span className="font-semibold text-lg tracking-tight">Barakah</span>
+          <div className="h-9 w-9 rounded-xl bg-emerald-600 text-white grid place-items-center font-bold">ر</div>
+          <span className="font-semibold text-lg tracking-tight">Rahbar</span>
         </a>
         <nav className="hidden md:flex items-center gap-6 text-sm text-gray-600">
           <a href="#features" className="hover:text-gray-900 flex items-center gap-2"><Star size={16}/> Features</a>
